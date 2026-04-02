@@ -16,6 +16,7 @@ exports.register = async (req, res) => {
 };
 
 exports.login = async (req, res) => {
+    console.log("JWT_SECRET:", process.env.JWT_SECRET); // 👈 AQUI
     const { email, senha } = req.body;
 
     const user = await pool.query(
